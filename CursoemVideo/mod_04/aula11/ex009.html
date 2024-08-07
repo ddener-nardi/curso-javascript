@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste condições</title>
+</head>
+<body>
+    <h2>Sistemas de Multas</h2>
+    Velocidade do carro:<input type="number" name="txtvel" id="txtvel"><km>km/h
+    <input type="button" id="button" value="Enviar" >    
+    <div id="res"></div> 
+    <script>
+        const enviar = document.getElementById('button')
+        enviar.addEventListener('click', somar)
+        function somar(){
+            let vel = document.getElementById('txtvel')
+            let res = document.getElementById('res') 
+            let velo = Number(vel.value) 
+            if ( vel.value >= 80) {
+                res.innerHTML += `<p>Sua velocidade(${vel.value}km/h) está além do limite. <strong>Você será multado!</strong></p>` 
+            } else {
+                res.innerHTML += `<p>Sua velocidade(${vel.value}km/h) está <strong>adequada!</strong></p>`           
+            }
+            res.innerHTML += '<p style="color: red;">Drive safe</p>'
+        }
+    </script>
+</body>
+</html>
