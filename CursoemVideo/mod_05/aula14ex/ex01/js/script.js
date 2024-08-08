@@ -4,9 +4,13 @@ function contar(){
     let step = document.querySelector('input#step').value   
     let res = document.getElementById('res')
 
-    if(start == 0 || end == 0 || step == 0){
+    if(start.length == 0 || end.length == 0 || step.length == 0){
         alert('Os números devem ser maiores que 0')
     } else{
+        if (step <= 0){
+            window.alert('Passo inválido. Considerando step = 1')
+            step = 1
+        }
         if(start < end){
             res.innerHTML = 'Contando: '
             for(let i = Number(start); i <= Number(end); i+=Number(step)){
