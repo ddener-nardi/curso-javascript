@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicios 1</title>
+    <title>Exercicios</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="carregar()">
+<body onload="">
     <header>
-        <p>Hora do Dia</p>
+        <p>Vamos contar</p>
     </header>
     <main>
         <section>
-            <div id="msg">
-                Aqui vai aperecer a mensagem
-            </div>
-            <div class="foto">
-                <img id="img" src="">
+            <div>
+                <form action="">
+                    <div>
+                        <label for="start">Início:</label>
+                        <input class="start" type="number" name="start" id="start">
+                    </div>
+                    <div>
+                        <label for="number">Fim:</label>
+                        <input type="number" name="end" id="end">
+                    </div>
+                    <div>
+                        <label for="step">Passo:</label>
+                        <input type="number" name="step" id="step">
+                    </div>
+                    <div>
+                        <button type="submit" onclick="contar()">Contar</button>
+                    </div>
+                </form>
+                </div class="res">
+            
+                <div>               
             </div>
         </section>
     </main>
