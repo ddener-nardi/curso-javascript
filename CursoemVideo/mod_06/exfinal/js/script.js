@@ -1,7 +1,7 @@
 let listaDeNumeros = []
 function adicionar(){
     let num = document.querySelector('#txtnumber').value
-    if( num > 100 || num == '' || listaDeNumeros.indexOf(num) != -1){
+    if( num > 100 || num < 1 || num == '' || naoRepetirNum(num)){
         if(num > 100){alert('O número deve ser menor ou igual a 100!')}else{alert('Selecione um número válido!')}
     }else{
         listaDeNumeros.push(Number(num))
@@ -26,6 +26,13 @@ function finalizar() {
         resLista.innerHTML += `Somando todos os valores, temos ${sum}.<br>`
         resLista.innerHTML += `A média dos valores digitados é ${sum / listaDeNumeros.length}.<br>`
     }  
+}
+function naoRepetirNum(num){
+    if (listaDeNumeros.indexOf(Number(num)) != -1){
+        return true
+    } else{
+        return false
+    }
 }
 function maiorNum(){
     let maior = 0
